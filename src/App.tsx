@@ -42,8 +42,8 @@ function App() {
           property="og:description"
           content="CSS Minifier is a free tool to optimize and compress your CSS files. Improve website performance and load times with our simple and effective tool."
         />
-        <meta property="og:url" content="https://yourdomain.com" />
-        <meta property="og:image" content="https://yourdomain.com/og-image.png" />
+        <meta property="og:url" content="https://css-minifiy.netlify.app" />
+        <meta property="og:image" content="https://css-minifiy.netlify.app/9c1dbb7-d275-467c-b6e7-4d66da7fb7b0.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@ function App() {
           name="twitter:description"
           content="CSS Minifier is a free tool to optimize and compress your CSS files. Improve website performance and load times with our simple and effective tool."
         />
-        <meta name="twitter:image" content="https://yourdomain.com/twitter-image.png" />
+        <meta name="twitter:image" content="https://css-minifiy.netlify.app/d9c1dbb7-d275-467c-b6e7-4d66da7fb7b0.webp" />
 
         {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" />
@@ -65,11 +65,11 @@ function App() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "CSS Minifier",
-            "url": "https://yourdomain.com",
+            "url": "https://css-minifiy.netlify.app",
             "description": "A free tool to optimize and compress your CSS files for better performance.",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://yourdomain.com?q={search_term_string}",
+              "target": "https://css-minifiy.netlify.app?q={search_term_string}",
               "query-input": "required name=search_term_string",
             },
             "publisher": {
@@ -77,7 +77,7 @@ function App() {
               "name": "CSS Minifier Team",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://yourdomain.com/logo.png",
+                "url": "https://css-minifiy.netlify.app/logo.png",
               },
             },
           })}
