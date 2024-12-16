@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import { Disclosure } from '@headlessui/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: 'What is CSS minification?',
@@ -35,27 +33,23 @@ export default function FAQ() {
         </h2>
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border rounded-lg dark:border-gray-700"
-            >
-              <button
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="font-semibold dark:text-white">{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-gray-500" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-gray-500" />
-                )}
-              </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 text-gray-600 dark:text-gray-300 border-t dark:border-gray-700">
-                  {faq.answer}
+            <Disclosure key={index}>
+              {({ open }) => (
+                <div className="border rounded-lg dark:border-gray-700">
+                  <Disclosure.Button className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <span className="font-semibold dark:text-white">{faq.question}</span>
+                    {open ? (
+                      <ChevronUp className="h-5 w-5 text-gray-500" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-gray-500" />
+                    )}
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="px-6 py-4 text-gray-600 dark:text-gray-300 border-t dark:border-gray-700">
+                    {faq.answer}
+                  </Disclosure.Panel>
                 </div>
               )}
-            </div>
+            </Disclosure>
           ))}
         </div>
       </div>
