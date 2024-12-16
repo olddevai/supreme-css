@@ -56,7 +56,7 @@ function App() {
 
         {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Structured Data */}
