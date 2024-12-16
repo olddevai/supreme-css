@@ -1,5 +1,5 @@
 // Advanced CSS Minification utility functions
-export function advancedMinifyCSS(css: string): string {
+export function MinifyCSS(css: string): string {
   if (!css) return '';
 
   return css
