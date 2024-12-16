@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { MessageCircle } from 'lucide-react'; // Import the Telegram icon from lucide-react
 import Header from './components/Header';
 import Hero from './components/Hero';
 import MinifierPanel from './components/MinifierPanel';
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
       <Helmet>
-        {/* Primary Meta Tags */}
+        {/* Meta Tags */}
         <title>CSS Minifier - Optimize Your CSS for Better Performance</title>
         <meta
           name="description"
@@ -98,6 +99,17 @@ function App() {
           <p>© {new Date().getFullYear()} CSS Minifier. All rights reserved.</p>
         </footer>
       </div>
+
+      {/* Floating Telegram Button */}
+      <a
+        href="https://t.me/yourTelegramChannel"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition-colors"
+        aria-label="Join our Telegram Channel"
+      >
+        <MessageCircle className="h-6 w-6" />
+      </a>
     </div>
   );
 }
